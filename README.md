@@ -1,4 +1,4 @@
-# 🎓 AraEduAgent
+# AraEduAgent
 
 An Arabic adaptation of the [EduAgent](https://github.com/EduAgent/EduAgent) framework for modeling student learning behavior in online learning environments. This project translates the EduAgent dataset into Modern Standard Arabic (MSA) and benchmarks multiple LLMs on student simulation tasks.
 

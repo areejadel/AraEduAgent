@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+.jupyter/
+
+# Logs
+ports.log
+
+# Large duplicate archive
+NLP PROJECT.zip
+
+# Backup notebooks (contain API keys)
+simulation_backup.ipynb
+analysis_results_backup.ipynb
+
+# Shell
+onstart.sh

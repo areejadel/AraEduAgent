@@ -19,7 +19,7 @@
 ---
 ## Overview
 AraEduAgent extends the EduAgent generative student simulation framework to support the Arabic language and culturally relevant educational contexts. The framework leverages LLM-based virtual student agents whose behavior is conditioned on rich demographic and psychological profiles, including academic background, motivation, focus, curiosity, and family support.
-The project benchmarks four LLMs — two commercial and two open-source — against real student behavioral data collected from **301 students** enrolled in online courses. Evaluation covers:
+The project benchmarks five LLMs — two commercial and three open-source (including **ALLaM-7B**, an Arabic-specialized model from SDAIA) — against real student behavioral data collected from **301 students** enrolled in online courses. Evaluation covers:
 - **Behavioral metrics**: gaze-based attention and engagement patterns from eye-tracking (AOI) data
 - **Cognitive metrics**: focus, curiosity, compliance, and prior knowledge indicators
 - **Assessment metrics**: post-lecture quiz performance and answer accuracy
@@ -36,6 +36,15 @@ The dataset originates from a study conducted at **Umm Al-Qura University**, Mak
 | GPT-4o Mini | Commercial | OpenAI |
 | Llama 3.1 (8B) | Open Source | Meta |
 | Qwen2.5 (7B) | Open Source | Alibaba |
+| ALLaM-7B Instruct | Open Source (Arabic-specialized) | SDAIA |
+
+### ALLaM Context-Reduction Strategies
+ALLaM-7B has a 4,096-token context limit that prevents direct use of the full EduAgent prompt. We evaluated three strategies to overcome this:
+- **S1** — Memory-free with cognitive prior (`forget_effect=no_memory`, `KM` only, `standard_cog`)
+- **S2** — LLMLingua-2 automatic compression (full memory `KM+PM+MM+CM` + XLM-RoBERTa sanitization + vocab clamping)
+- **S3** — Memory-free without cognitive prior (`forget_effect=no_memory`, `KM` only, `standard`)
+
+S3 is used in the main benchmark results; S1 achieves the lowest Focus/Engagement MAE among the three strategies. See `run_allam_cuda.py` and `analyze_results_with_allam_done.ipynb`.
 
 ---
 ## Dataset

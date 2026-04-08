@@ -1,0 +1,13 @@
+torch>=2.1.0
+transformers>=4.40.0
+accelerate>=0.27.0
+huggingface_hub>=0.20.0
+openai>=1.0.0
+pandas>=1.5.0
+numpy>=1.24.0
+scikit-learn>=1.2.0
+matplotlib>=3.6.0
+seaborn>=0.12.0
+jupyter>=1.0.0
+ipykernel>=6.0.0
+llmlingua>=0.2.0

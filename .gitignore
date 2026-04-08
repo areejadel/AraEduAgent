@@ -21,3 +21,30 @@ analysis_results_backup.ipynb
 
 # Shell
 onstart.sh
+
+# macOS resource forks
+._*
+
+# Paper / LaTeX (do not publish)
+_IEEE_Access__AraEduAgent__Arabic_EduAgent_Dataset_for_Peer_Attention_Modeling_in_eLearning/
+_IEEE_Access__AraEduAgent__Arabic_EduAgent_Dataset_for_Peer_Attention_Modeling_in_eLearning.pdf
+AraEduAgent_submission.zip
+ALLaM_Experiment_Explanation.pdf
+fix_paper_figures.py
+create_allam_figures.py
+
+# Logs
+*.log
+
+# Secrets
+secrets_found.txt
+
+# Large raw experiment outputs (462 MB) — keep summarized results only
+dataset/simulation/full_experiment_300_students/*allam*/
+
+# Local environments
+venv/
+.venv/
+mlx_allam_4bit/
+
+
